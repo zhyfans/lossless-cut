@@ -1,7 +1,8 @@
+// eslint-disable-line unicorn/filename-case
 export default {
-  input: ['src/**/*.{js,jsx}', 'public/*.js'],
+  input: ['src/renderer/**/*.{js,jsx,ts,tsx}', 'src/main/*.{js,ts}'],
 
-  output: 'public/locales/$LOCALE/$NAMESPACE.json',
+  output: 'locales/$LOCALE/$NAMESPACE.json',
   indentation: 4,
 
   sort: true,
@@ -15,7 +16,7 @@ export default {
 
   defaultValue: (lng, ns, key) => key,
 
-  // Keep in sync between i18next-parser.config.js and i18n-common.js:
+  // Keep in sync between i18next-parser.config.js and i18nCommon.js:
   keySeparator: false,
   namespaceSeparator: false,
 };
